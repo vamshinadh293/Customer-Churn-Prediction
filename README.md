@@ -26,6 +26,43 @@ This project develops a complete ML pipeline from exploratory data analysis and 
 - Web frontend
 - Docker containerization
 
+## Application Architecture
+
+                ┌──────────────────┐
+                │     Frontend     │
+                │    HTML/CSS/JS   │
+                └────────┬─────────┘
+                         │
+                         │ HTTP POST
+                         ▼
+                ┌──────────────────┐
+                │     FastAPI      │
+                │    /predict      │
+                └────────┬─────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │  Preprocessing   │
+                │     Pipeline     │
+                └────────┬─────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │  Tuned XGBoost   │
+                │      Model       │
+                └────────┬─────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │ Probability +    │
+                │    Threshold     │
+                └────────┬─────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │ Churn Prediction │
+                └──────────────────┘
+
 ## Machine Learning Pipeline
 
 ```text
@@ -102,7 +139,7 @@ At a threshold of 0.27:
 | F1 Score  | 63.98% |
 | ROC-AUC   | 84.73% |
 
-**Confusion matrix:**
+## Confusion matrix:
 
 ```text
 [[767, 268],
