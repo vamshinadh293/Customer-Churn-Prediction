@@ -208,6 +208,9 @@ Stop the container:
 docker stop customer-churn-container
 ```
 
+## Application preview
+![Customer Churn Prediction Application](screenshots/churn-app.png)
+
 ## Project Structure
 
 ```text
