@@ -68,6 +68,14 @@ Three classification approaches were evaluated:
 - **Random Forest** — used to capture nonlinear relationships and interactions between customer attributes.
 - **XGBoost** — selected as the final model after comparing model performance and tuning hyperparameters.
 
+## Model Comparision
+
+| Model               | Accuracy | Precision | Recall | F1    | ROC-AUC |
+|---------------------|----------|-----------|--------|-------|---------|
+| Logistic Regression | ~79.9%   | 65.3%     | 51.9%  | 57.8% | 84.2%   |
+| Random Forest       | ~79.8%   | 65.7%     | 50.3%  | 57.0% | 83.9%   |
+| Tuned XGBoost       | 80.7%    | 66.9%     | 54.0%  | 59.8% | 84.7%   |
+
 ## Final Model Performance
 
 The tuned XGBoost model achieved the following test-set results at the default 0.50 classification threshold:
